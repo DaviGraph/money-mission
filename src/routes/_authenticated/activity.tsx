@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, ErrorBox, Field, Loading, PageHeader, Stat } from "@/components/ui-bits-proxy";
+import { Card, ErrorBox, Loading, PageHeader, Stat } from "@/components/ui-bits";
+import { Field } from "@/components/forms";
 import { useActivities, useGoal, useIncome, useSave } from "@/lib/data";
 import { ACTIVITY_FIELDS, qualifyingDates, streakStats, todayLagos, type ActivityKey } from "@/lib/finance";
 
