@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { challengeClock, derivePaymentStatus, qualifyingDates, streakStats, summarize } from "./finance";
+import { challengeClock, derivePaymentStatus, qualifyingDates, streakStats, summarize } from "@/lib/finance";
 
 const base = { target: 500000, start: "2026-11-02", end: "2026-12-31", deals: [], expenses: [], probabilities: {} };
 
