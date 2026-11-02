@@ -14,7 +14,243 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      daily_activities: {
+        Row: {
+          accomplished: string | null
+          activity_date: string
+          calls_completed: number
+          client_work_completed: number
+          content_published: number
+          created_at: string
+          deals_closed: number
+          followups_sent: number
+          id: string
+          improve: string | null
+          learned: string | null
+          pitches_sent: number
+          proposals_sent: number
+          researched_businesses: number
+          user_id: string
+          went_wrong: string | null
+        }
+        Insert: {
+          accomplished?: string | null
+          activity_date: string
+          calls_completed?: number
+          client_work_completed?: number
+          content_published?: number
+          created_at?: string
+          deals_closed?: number
+          followups_sent?: number
+          id?: string
+          improve?: string | null
+          learned?: string | null
+          pitches_sent?: number
+          proposals_sent?: number
+          researched_businesses?: number
+          user_id: string
+          went_wrong?: string | null
+        }
+        Update: {
+          accomplished?: string | null
+          activity_date?: string
+          calls_completed?: number
+          client_work_completed?: number
+          content_published?: number
+          created_at?: string
+          deals_closed?: number
+          followups_sent?: number
+          id?: string
+          improve?: string | null
+          learned?: string | null
+          pitches_sent?: number
+          proposals_sent?: number
+          researched_businesses?: number
+          user_id?: string
+          went_wrong?: string | null
+        }
+        Relationships: []
+      }
+      deals: {
+        Row: {
+          client_name: string
+          contact_information: string | null
+          created_at: string
+          estimated_value: number
+          expected_close_date: string | null
+          id: string
+          industry: string | null
+          next_follow_up_date: string | null
+          notes: string | null
+          service_type: string
+          stage: string
+          user_id: string
+        }
+        Insert: {
+          client_name: string
+          contact_information?: string | null
+          created_at?: string
+          estimated_value?: number
+          expected_close_date?: string | null
+          id?: string
+          industry?: string | null
+          next_follow_up_date?: string | null
+          notes?: string | null
+          service_type?: string
+          stage?: string
+          user_id: string
+        }
+        Update: {
+          client_name?: string
+          contact_information?: string | null
+          created_at?: string
+          estimated_value?: number
+          expected_close_date?: string | null
+          id?: string
+          industry?: string | null
+          next_follow_up_date?: string | null
+          notes?: string | null
+          service_type?: string
+          stage?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      expenses: {
+        Row: {
+          amount: number
+          category: string
+          created_at: string
+          description: string
+          expense_date: string
+          id: string
+          notes: string | null
+          roi_classification: string
+          user_id: string
+        }
+        Insert: {
+          amount: number
+          category: string
+          created_at?: string
+          description: string
+          expense_date: string
+          id?: string
+          notes?: string | null
+          roi_classification?: string
+          user_id: string
+        }
+        Update: {
+          amount?: number
+          category?: string
+          created_at?: string
+          description?: string
+          expense_date?: string
+          id?: string
+          notes?: string | null
+          roi_classification?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      goals: {
+        Row: {
+          created_at: string
+          currency: string
+          daily_followup_target: number
+          daily_pitch_target: number
+          end_date: string
+          id: string
+          stage_probabilities: Json
+          start_date: string
+          target_amount: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          currency?: string
+          daily_followup_target?: number
+          daily_pitch_target?: number
+          end_date?: string
+          id?: string
+          stage_probabilities?: Json
+          start_date?: string
+          target_amount?: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          currency?: string
+          daily_followup_target?: number
+          daily_pitch_target?: number
+          end_date?: string
+          id?: string
+          stage_probabilities?: Json
+          start_date?: string
+          target_amount?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
+      income_records: {
+        Row: {
+          amount_received: number
+          category: string
+          client_name: string
+          created_at: string
+          deal_value: number
+          id: string
+          notes: string | null
+          payment_date: string
+          payment_status: string
+          project_name: string
+          user_id: string
+        }
+        Insert: {
+          amount_received?: number
+          category: string
+          client_name: string
+          created_at?: string
+          deal_value?: number
+          id?: string
+          notes?: string | null
+          payment_date: string
+          payment_status: string
+          project_name?: string
+          user_id: string
+        }
+        Update: {
+          amount_received?: number
+          category?: string
+          client_name?: string
+          created_at?: string
+          deal_value?: number
+          id?: string
+          notes?: string | null
+          payment_date?: string
+          payment_status?: string
+          project_name?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          full_name: string | null
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          full_name?: string | null
+          id: string
+        }
+        Update: {
+          created_at?: string
+          full_name?: string | null
+          id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
